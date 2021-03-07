@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* Variabel för brytpunkt mellan mobilskärm och tablet */
+/* Variabel för brytpunkt mellan tablet och laptop */
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #eeeeee;
+  color: #6a6168;
+}
+
+#menu_icon {
+  position: fixed;
+  /* Fixerad meny icon*/
+  top: 30px;
+  left: 30px;
+}
+
+@media (min-width: 900px) {
+  #menu_icon {
+    top: 30px;
+    left: 100px;
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+main .img_grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px;
+}
+
+@media (min-width: 900px) {
+  main .img_grid {
+    margin: 30px 100px;
+  }
+}
+
+main .img_grid .img_wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin-bottom: 4%;
+  background-color: #fff;
+  position: relative;
+}
+
+@media (min-width: 480px) {
+  main .img_grid .img_wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 900px) {
+  main .img_grid .img_wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) {
+  main .img_grid .img_wrapper.img_wrapper:nth-child(odd) {
+    margin-right: 4%;
+    /* Enbart kortet med udda nurering (1, 3, 5..) får margin rigth   */
+  }
+}
+
+@media (min-width: 900px) {
+  main .img_grid .img_wrapper.img_wrapper:nth-child(3n+3) {
+    margin-right: 0;
+    /* Var tredje kort har margin 0 på högersida */
+  }
+}
+
+main .img_grid .img_wrapper .rounded_img {
+  position: absolute;
+  /* Absolute positionering */
+  width: 50px;
+  /* För att border-radius: 50% ska fungera måste höjd och bredd vara lika.*/
+  height: 50px;
+  top: 10px;
+  left: 10px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  /* Skugga runt bilden */
+  border-radius: 50%;
+}
+
+main .img_grid .img_wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 10px;
+  border-radius: 0 0 5px 5px;
+  font-size: 0.8rem;
+}
+
+main .img_grid .img_wrapper header .icon_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .img_grid .img_wrapper header .icon_holder p {
+  padding-left: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+main .img_grid .img_wrapper header .icon_holder.icon_holder:last-child {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* Placerar save längst till höger i headern*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,125 @@
+/* Reset */
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  max-width: 1160px;
+  background-color: #D2EAE2;
+  /* Header */
+  /* Section */
+  /* Article */
+  /* Footer */
+}
+
+.container header {
+  background-color: #FF3F34;
+  height: 150px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1120px;
+          flex: 0 0 1120px;
+  margin: 20px 20px 0 20px;
+}
+
+.container section {
+  background-color: #FFA801;
+  height: 300px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 550px;
+          flex: 0 0 550px;
+  margin: 20px 0 0 20px;
+}
+
+.container article {
+  background-color: #FFDD59;
+  height: 300px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 265px;
+          flex: 0 0 265px;
+  margin: 20px 0 0 20px;
+  border-bottom: 10px #FFD802 solid;
+}
+
+.container footer {
+  background-color: #0BE881;
+  height: 300px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1120px;
+          flex: 0 0 1120px;
+  margin: 20px 20px 20px 20px;
+}
+
+/* Styling screen max witdh 768px */
+@media only screen and (max-width: 768px) {
+  /* Container */
+  .container {
+    max-width: 768px;
+    /* Header */
+    /* Section */
+    /* Article */
+    /* Footer */
+  }
+  .container header {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 728px;
+            flex: 0 0 728px;
+  }
+  .container section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 354px;
+            flex: 0 0 354px;
+  }
+  .container article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 354px;
+            flex: 0 0 354px;
+  }
+  .container footer {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 728px;
+            flex: 0 0 728px;
+  }
+}
+
+/* Styling mobile */
+@media only screen and (max-width: 375px) {
+  /* Container */
+  .container {
+    max-width: 375px;
+    /* Header */
+    /* Section*/
+    /* Article */
+    /* Footer */
+  }
+  .container header {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 335px;
+            flex: 0 0 335px;
+  }
+  .container section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 335px;
+            flex: 0 0 335px;
+  }
+  .container article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 335px;
+            flex: 0 0 335px;
+  }
+  .container footer {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 335px;
+            flex: 0 0 335px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

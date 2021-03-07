@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* Variabel för brytpunkt mellan mobil skärm och tablet*/
+/* Variabel för brytpunkt mellan tablet och laptop */
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  overflow: hide;
+  /* Gömmer det befinner sig utanför skärmen */
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 1.9;
+  max-width: 30rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.main_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main_wrapper nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  padding: 20px 20px;
+}
+
+.main_wrapper header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  background-image: url(./images/batman/small.jpg);
+  /* Bakgrundsbild i headern för små skärmar */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 70vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+@media (min-width: 480px) {
+  .main_wrapper header {
+    background-image: url(./images/batman/medium.jpg);
+    /* Bakgrundsbild i headern för medium skärmar */
+  }
+}
+
+@media (min-width: 900px) {
+  .main_wrapper header {
+    background-image: url(./images/batman/convert.jpg);
+    /* Bakgrundsbild i headern för stora skärmar */
+  }
+}
+
+.main_wrapper header .small-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.main_wrapper section {
+  margin: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_wrapper section .movie_slider {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  /* Användaren kan scrolla i x-lede i film sildern */
+}
+
+.main_wrapper section .movie_slider .img_wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
+  margin-left: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main_wrapper section .movie_slider .img_wrapper:hover .movie_info_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main_wrapper section .movie_slider .img_wrapper:hover .image {
+  display: none;
+}
+
+.main_wrapper section .movie_slider .img_wrapper:hover .img_wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.main_wrapper section .movie_slider .img_wrapper .image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+@media (min-width: 480px) {
+  .main_wrapper section .movie_slider .img_wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+}
+
+@media (min-width: 900px) {
+  .main_wrapper section .movie_slider .img_wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 12.0625%;
+            flex: 0 0 12.0625%;
+    /* 96,5/8 */
+    margin-left: 0.5%;
+  }
+}
+
+.main_wrapper section .movie_slider .img_wrapper:first-child {
+  margin-left: 0;
+  /* Först filmen i varje slider har margin left 0 */
+}
+
+.main_wrapper section .movie_slider .img_wrapper .movie_info_wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: none;
+  background-image: url(./images/pepparmint/convert.jpg);
+  /* Bakgrundsbild i headern för små skärmar */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main_wrapper section .movie_slider .img_wrapper .movie_info_wrapper .movie .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */

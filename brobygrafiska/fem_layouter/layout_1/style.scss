@@ -1,0 +1,97 @@
+
+/* Reset */
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1160px;
+    background-color: #D2EAE2;
+
+    /* Header */
+    header {
+        background-color: #FF3F34;
+        height: 150px;
+        flex: 0 0 1120px;
+        margin: 20px 20px 0 20px;
+    }
+
+    /* Section */
+    section {
+        background-color: #FFA801;
+        height: 300px;
+        flex: 0 0 550px;
+        margin: 20px 0 0 20px;
+    }
+    /* Article */
+    article {
+        background-color: #FFDD59;
+        height: 300px;
+        flex: 0 0 265px;
+        margin: 20px 0 0 20px;
+        border-bottom: 10px #FFD802 solid;
+    }
+    /* Footer */
+    footer {
+        background-color: #0BE881;
+        height: 300px;
+        flex: 0 0 1120px;
+        margin: 20px 20px 20px 20px;
+    }
+}
+
+/* Styling screen max witdh 768px */
+@media only screen and (max-width: 768px) {
+    /* Container */
+    .container {
+        max-width: 768px;
+        /* Header */
+        header {
+            flex: 0 0 728px;
+        }
+        /* Section */
+        section {
+            flex: 0 0 354px;
+        }
+        /* Article */
+        article {
+            flex: 0 0 354px;
+        }
+        /* Footer */
+        footer {
+            flex: 0 0 728px;
+        }
+    }
+  } 
+
+  /* Styling mobile */
+  @media only screen and (max-width: 375px) {
+    /* Container */
+    .container {
+
+        max-width: 375px;
+
+        /* Header */
+        header {
+            flex: 0 0 335px;
+        }
+        /* Section*/
+        section {
+            flex: 0 0 335px;
+        }
+        /* Article */
+        article {
+            flex: 0 0 335px;
+        }
+        /* Footer */
+        footer {
+            flex: 0 0 335px;
+        }
+    }
+  } 

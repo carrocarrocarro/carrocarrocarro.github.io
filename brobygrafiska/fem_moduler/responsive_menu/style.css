@@ -1,0 +1,270 @@
+@charset "UTF-8";
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #292d3e;
+}
+
+header {
+  background-color: #210121;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 480px) {
+  header nav {
+    margin: 0 30px;
+  }
+}
+
+header nav .nav_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 480px) {
+  header nav .nav_main {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+header nav .nav_main #logo {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav_main #logo a {
+  background-color: #5b3186;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav_main #logo a span {
+  color: #210122;
+  line-height: 1;
+}
+
+@media (min-width: 480px) {
+  header nav .nav_main #logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Visas när skärmen är minst 480px*/
+  }
+}
+
+header nav .nav_main li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* Alla meny alternativ tar upp lika mycket plats för att fylla hela menyraden.*/
+}
+
+@media (min-width: 480px) {
+  header nav .nav_main li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    /* Menyalternativen tar upp så mycket plats som behövs.*/
+  }
+}
+
+header nav .nav_main li a {
+  text-decoration: none;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+}
+
+@media (min-width: 480px) {
+  header nav .nav_main li a {
+    margin: 0 15px;
+  }
+}
+
+header nav .nav_main li a p {
+  display: none;
+  /* Texten visas ej i mobilt läge */
+}
+
+@media (min-width: 480px) {
+  header nav .nav_main li a p {
+    display: block;
+    /* Texten visas vid minst 480px */
+  }
+}
+
+header nav .nav_main li a .material-icons {
+  padding: 10px 0;
+  color: #5b3186;
+}
+
+@media (min-width: 480px) {
+  header nav .nav_main li a .material-icons {
+    display: none;
+    /* Ikoner döljs vid från och med 480px */
+  }
+}
+
+header nav .nav_main li a.active {
+  background-color: #5b3186;
+}
+
+header nav .nav_main li a.active .material-icons {
+  color: #fff;
+}
+
+@media (min-width: 480px) {
+  header nav .nav_main li a.active {
+    background-color: inherit;
+    border-bottom: 3px solid #5b3186;
+  }
+}
+
+header nav .nav_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .nav_right li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav_right #profile_img a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .nav_right #search {
+  display: none;
+  /* Döljs i på mobilskärm och tablet */
+}
+
+@media (min-width: 900px) {
+  header nav .nav_right #search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Visas på laptop skärm */
+  }
+}
+
+header nav .nav_right #search form {
+  position: relative;
+  margin-right: 20px;
+}
+
+header nav .nav_right #search form input {
+  border-radius: 10px;
+  padding: 0.3rem 0.3rem 0.3rem 3rem;
+  background-color: #2f313b;
+  color: #fff;
+  border: none;
+}
+
+header nav .nav_right #search form input::-webkit-input-placeholder {
+  color: #767780;
+  letter-spacing: 1px;
+}
+
+header nav .nav_right #search form input:-ms-input-placeholder {
+  color: #767780;
+  letter-spacing: 1px;
+}
+
+header nav .nav_right #search form input::-ms-input-placeholder {
+  color: #767780;
+  letter-spacing: 1px;
+}
+
+header nav .nav_right #search form input::placeholder {
+  color: #767780;
+  letter-spacing: 1px;
+}
+
+header nav .nav_right #search form button {
+  background-color: transparent;
+  color: #767780;
+  border: none;
+  position: absolute;
+  left: 5px;
+  top: 2px;
+}
+
+@media (min-width: 480px) {
+  header nav .nav_right {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /* Positioneras till höger i menyn */
+    padding-right: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

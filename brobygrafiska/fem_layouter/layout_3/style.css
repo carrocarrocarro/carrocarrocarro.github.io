@@ -1,0 +1,130 @@
+/* Jag designar denna med mobile first approach*/
+/* Reset */
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* body */
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 100%;
+}
+
+/* H1 */
+h1 {
+  font-family: 'Charm', cursive;
+  font-size: 4rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* H2 */
+h2 {
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* H3 */
+h3 {
+  font-family: 'Charm', cursive;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+/* p */
+p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* img */
+img {
+  width: 100%;
+}
+
+/* container */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* section */
+}
+
+.container section {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  /* #a3 */
+  /* figcaption */
+  /* article */
+}
+
+.container section#a3 {
+  background-color: #FAFDF8;
+}
+
+.container section figcaption {
+  max-width: 400px;
+  margin: 10px 20px;
+}
+
+.container section article {
+  max-width: 400px;
+  margin: 20px 20px;
+  height: 100%;
+  /* #heading */
+}
+
+.container section article#heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 40px 0;
+}
+
+/* Style screens wider than 786px */
+@media only screen and (min-width: 768px) {
+  .container section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+
+/* Style screens wider than 1400px */
+@media only screen and (min-width: 1400px) {
+  .container section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3333%;
+            flex: 0 0 33.3333%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

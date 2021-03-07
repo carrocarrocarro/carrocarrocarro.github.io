@@ -1,0 +1,70 @@
+$blue: rgb(42,99,226); /* Variabel för blå */
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
+header {
+    padding: 30px;
+    background-color: $blue; /* Använder blå variabel för bakgrund på headern*/
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .material-icons {
+        color:#0d41b5; /* Iconen i headern får mörkblå färg */
+        font-size: 8rem;
+    }
+    h1 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* För scroll */
+    article {
+        color: darkgray;
+        max-width: 20rem;
+        margin: 2rem 2rem 5rem 2rem;
+        p {
+            margin-bottom: 10px;
+            line-height: 1.9;
+        }
+    }
+}
+
+nav {
+    background-color: $blue; /* Variable för färg */
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-bottom: 2px solid rgb(13,65,181);
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        
+        li {
+            padding: 1rem;
+        
+            &.middle_icon {
+                border-radius: 0 0 50% 50%; /* Runda kanter längst ned på den vita bakrgunden till ikonen i mitten. */
+                background-color: #fff;
+                color: black;
+            }
+        }
+    }
+    
+}

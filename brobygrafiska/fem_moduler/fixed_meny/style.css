@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* Variabel för blå */
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+}
+
+header {
+  padding: 30px;
+  background-color: #2a63e2;
+  /* Använder blå variabel för bakgrund på headern*/
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .material-icons {
+  color: #0d41b5;
+  /* Iconen i headern får mörkblå färg */
+  font-size: 8rem;
+}
+
+header h1 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  /* För scroll */
+}
+
+main article {
+  color: darkgray;
+  max-width: 20rem;
+  margin: 2rem 2rem 5rem 2rem;
+}
+
+main article p {
+  margin-bottom: 10px;
+  line-height: 1.9;
+}
+
+nav {
+  background-color: #2a63e2;
+  /* Variable för färg */
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  border-bottom: 2px solid #0d41b5;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+nav ul li.middle_icon {
+  border-radius: 0 0 50% 50%;
+  /* Runda kanter längst ned på den vita bakrgunden till ikonen i mitten. */
+  background-color: #fff;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */

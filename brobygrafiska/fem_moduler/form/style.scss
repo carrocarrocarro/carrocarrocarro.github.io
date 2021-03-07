@@ -1,0 +1,269 @@
+$breakpoint-phone: 480px;
+$breakpoint-tablet: 900px;
+$breakpoint-laptop: 1200px;
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F27E59;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color:rgb(21,18,18);
+}
+img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+
+    @media (min-width: $breakpoint-phone) {
+          padding: 10px; 
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: 40px;
+       
+  }
+    
+    header{
+        flex: 0 0 100%;
+        padding: 1rem;
+        background-color: #FFE0D2;
+        display: flex;
+        align-items: center;
+        @media (min-width: $breakpoint-phone) {
+            border-radius: 30px 30px 0 0; 
+            
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            display: none; /* Döljs i stor skärm*/
+            
+            
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(242,126,89);
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            margin-right: 1rem;
+
+            .material-icons{
+                color: #fff;
+                font-size: 32px;
+            }
+        }
+        .app_heading {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+    }
+    main {
+        flex: 0 0 100%;
+        padding: 5%;
+        background-color: #fff;
+
+        @media (min-width: $breakpoint-tablet) {
+            flex: 0 0 60%;
+            border-radius: 30px 0 0 30px;
+            /* align-self: stretch; */
+        }
+
+        form {
+            
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                flex: 0 0 100%;
+            }
+
+            @media (min-width: $breakpoint-phone) {
+                flex-direction: row;
+                flex-wrap: wrap;
+             }
+
+            .password_wrapper {
+                @media (min-width: $breakpoint-phone) {
+                    flex: 0 0 48%;
+                    margin-right: 4%;
+                }
+                     
+            }
+
+            .margin-right {
+                @media (min-width: $breakpoint-phone) {
+                    margin-right: 0;
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                
+                @media (min-width: $breakpoint-phone) {
+                    flex: 0 0 100%;
+
+                    
+                }
+                &.fifty {
+                    @media (min-width: $breakpoint-phone) {
+                        flex: 0 0 48%;
+                        margin-right: 4%;
+                    }
+                }
+                
+                    
+
+                label {
+                    color:rgb(60,52,53);
+                    font-size: 1rem;
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                }
+
+                input {
+                    padding: 0.5rem;
+                    border: 1px solid rgb(123,111,114);
+                    border-radius: 3px;
+                    margin-bottom: 1rem;
+                }
+
+                select {
+                    border: 1px solid rgb(123,111,114);
+                    padding: 0.5rem;
+                    border-radius: 3px;
+                    margin-bottom: 1rem;
+                    color: rgb(117,117,117);
+                    appearance: none;
+                    background-image:  url('./images/arrow.svg');
+                    background-repeat: no-repeat;
+                    background-position: 96%; 
+
+                    option {
+                        color: rgb(117,117,117);
+                    }
+   
+                }
+
+                &#submit_wrapper {
+                    display: flex;
+
+                    @media (min-width: $breakpoint-phone) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    #member{
+                        color: rgb(145,145,145);
+                        margin-bottom: 1rem;
+                        flex: 0 0 50%;
+                    } 
+                    input {
+                        &#submit {
+                            padding: 0.5rem;
+                            color: #fff;
+                            background-color: rgb(65,60,61);
+                            border-radius: 5px;
+                            border: none;
+                            font-weight: 500;
+                            font-size: 1.2rem;
+                            letter-spacing: 1px;
+                        }
+                    }
+                } 
+            } 
+        }  
+    }
+    footer {
+        flex: 0 0 100%;
+        background-color: #FFE0D2;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        @media (min-width: $breakpoint-phone) {
+            border-radius: 0 0 30px 30px;
+            flex-direction: row; 
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            flex: 0 0 40%;
+            border-radius: 0 30px 30px 0;
+            flex-direction: column; 
+        }
+
+        section {
+            padding: 0.5rem;
+            color: rgb(21,18,18);
+
+            @media (min-width: $breakpoint-phone) {
+                flex: 0 0 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @media (min-width: $breakpoint-tablet) {
+                flex: 1;
+            } 
+            .small_text {
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+            }
+            
+            ul{
+                list-style-position: inside;
+                li{
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+
+        aside{
+            display: none; 
+            justify-content: center;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: flex; /* Visas för stor skärm */
+            }
+
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(242,126,89);
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                margin-right: 1rem;
+    
+                .material-icons{
+                    color: #fff;
+                    font-size: 32px;
+                }
+            }
+            .app_heading {
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

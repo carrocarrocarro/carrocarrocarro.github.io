@@ -1,0 +1,170 @@
+$breakpoint-phone: 480px;
+$breakpoint-tablet: 900px;
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(41,45,62);
+}
+
+header {
+    background-color: rgb(33, 1, 33);
+
+    nav {
+        display: flex;
+
+        @media (min-width: $breakpoint-phone) {
+            margin: 0 30px;
+            
+        } 
+
+        .nav_main {
+            display: flex;
+            list-style: none;
+            flex: 0 0 80%;
+            justify-content: space-around;
+
+            @media (min-width: $breakpoint-phone) {
+                flex: 0 0 70%;
+                justify-content: flex-start;
+                
+            } 
+
+            #logo {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                a {
+                        background-color: rgb(91,49,134);
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    span {
+                        color:rgb(33,1,34);
+                        line-height: 1;
+                    }
+                }      
+                @media (min-width: $breakpoint-phone) {
+                    display: flex; /* Visas när skärmen är minst 480px*/
+       
+                }
+            }
+
+            li {
+               flex: 1; /* Alla meny alternativ tar upp lika mycket plats för att fylla hela menyraden.*/
+                @media (min-width: $breakpoint-phone) {
+                    flex: 0 1 auto; /* Menyalternativen tar upp så mycket plats som behövs.*/
+                } 
+                a{
+                    text-decoration: none;
+                    color:#fff;
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px 0;
+                    
+                    @media (min-width: $breakpoint-phone) {
+                        margin: 0 15px;
+                    } 
+
+                    p{
+                       
+                        display: none; /* Texten visas ej i mobilt läge */
+                        @media (min-width: $breakpoint-phone) {
+                            display: block; /* Texten visas vid minst 480px */
+                            
+                        }
+                    }
+                    
+                    .material-icons {
+                        padding: 10px 0;
+                        color: rgb(91,49,134);
+                        @media (min-width: $breakpoint-phone) {
+                            display: none; /* Ikoner döljs vid från och med 480px */
+                            
+                        }
+                    }
+                  &.active{
+                      background-color: rgb(91,49,134);
+                      .material-icons{
+                        color: #fff; 
+                      }
+
+                      @media (min-width: $breakpoint-phone) {
+                        background-color: inherit;
+                        border-bottom: 3px solid rgb(91,49,134);
+                        
+                    }
+                  }  
+                }
+            }
+        }
+        .nav_right {
+            display: flex;
+            list-style: none;
+            flex: 0 0 20%;
+            justify-content: center;
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #profile_img { 
+                a {
+                    
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            #search{
+                display: none; /* Döljs i på mobilskärm och tablet */
+
+                @media (min-width: $breakpoint-tablet) {
+                    display:flex; /* Visas på laptop skärm */
+                } 
+
+                form {
+                    position: relative;
+                    margin-right: 20px;
+                    input {
+                        border-radius: 10px;
+                        padding: 0.3rem 0.3rem 0.3rem 3rem;
+                        background-color: rgb(47,49,59);
+                        color: #fff;
+                        border: none;
+                        &::placeholder {
+                            color: rgb(118,119,128);
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    button {
+                        background-color: transparent;
+                        color: rgb(118,119,128);
+                        border: none;
+                        position: absolute;
+                        left: 5px;
+                        top: 2px;
+
+                    }
+                }
+
+            }
+
+            @media (min-width: $breakpoint-phone) {
+                flex: auto;
+                justify-content: flex-end; /* Positioneras till höger i menyn */ 
+                padding-right: 10px;
+            } 
+        }
+    }
+}

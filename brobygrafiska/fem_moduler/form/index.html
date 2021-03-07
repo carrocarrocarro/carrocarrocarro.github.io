@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="material-icons">flutter_dash</span>
+            </div>
+            <p class="app_heading">EasyClass</p>
+        </header>
+        <main>
+            <form>
+                <h1>Get Started</h1>
+                <div class="fifty">
+                    <label for="slct_country">City</label>
+                        <select name="country" id="slct_country" value="Choose City" required>
+                            <option value="0">Choose City</option>
+                            <option value="france">France</option>
+                            <option value="germany">Germany</option>
+                            <option value="sweden">Sweden</option>
+                        </select>
+                </div>
+                <div>
+                    <label for="e_post">E-post</label>
+                    <input name="e_post" type="text" id="e_post" placeholder="name@hotmail.com" required>
+                </div>
+                <div>
+                    <label for="mobil">Mobil</label>
+                    <input name="mobil" type="numeric" id="mobil" placeholder="Mobile number" required>
+                </div>
+                <div class="password_wrapper">
+                    <label for="password">Lösenord</label>
+                    <input name="password" type="password" id="password" placeholder="•••••••" required>
+                </div>
+                <div class="password_wrapper margin-right">
+                    <label for="password_check">Bekräfta Lösenord</label>
+                    <input name="password_check" type="password" id="password_check" placeholder="•••••••" required>
+                </div>
+                <div id="submit_wrapper">
+                    <a href="#" id="member">Redan medlem? Logga in.</a>
+                    <input type="submit" value="Registrera" id="submit">
+                </div>
+            </form>
+        </main>
+        <footer>
+            <section>
+                <img alt="Många olika former och fäger" src="images/shapes.png">
+            </section>
+            <section>
+                <article>
+                    <p class="small_text">
+                        EasyClass is the best option
+                    </p>
+                    <ul>
+                        <li>Get instant feedback</li>
+                        <li>Put your learning into practice</li>
+                        <li>Learn by doing</li>
+                    </ul>
+                </article>
+            </section>
+            <aside>
+                <div class="logo">
+                    <span class="material-icons">flutter_dash</span>
+                </div>
+                <p class="app_heading">EasyClass</p>
+            </aside>
+        </footer>
+    </div>  
+</body>
+</html>

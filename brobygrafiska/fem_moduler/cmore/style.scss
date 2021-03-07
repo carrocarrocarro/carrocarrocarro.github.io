@@ -1,0 +1,144 @@
+$breakpoint-phone: 480px; /* Variabel för brytpunkt mellan mobil skärm och tablet*/
+$breakpoint-tablet: 900px; /* Variabel för brytpunkt mellan tablet och laptop */
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    overflow: hide; /* Gömmer det befinner sig utanför skärmen */
+}
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 1.9;
+    max-width: 30rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.main_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    nav {
+        flex: 0 0 100%;
+        padding: 20px 20px;
+    }
+    header {
+        flex: 0 0 100%;
+        background-image: url(./images/batman/small.jpg); /* Bakgrundsbild i headern för små skärmar */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+        height: 70vh;
+        flex-direction: column;
+        padding: 30px;
+
+        @media (min-width: $breakpoint-phone) {
+            background-image: url(./images/batman/medium.jpg); /* Bakgrundsbild i headern för medium skärmar */
+      
+        }
+        
+        @media (min-width: $breakpoint-tablet) {
+            background-image: url(./images/batman/convert.jpg); /* Bakgrundsbild i headern för stora skärmar */
+      
+        }
+
+        .small-heading {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+       
+    }
+    
+    section{
+        margin: 30px;
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+
+        .movie_slider {
+            flex: 0 0 100%;
+            display: flex;
+            overflow-x: scroll; /* Användaren kan scrolla i x-lede i film sildern */
+            .img_wrapper {
+                
+                flex: 0 0 65%;
+                margin-left: 0.5rem;
+                display: flex;
+
+                &:hover .movie_info_wrapper {
+                    display: flex;
+                }
+
+                &:hover .image {
+                    display: none;
+                }
+
+                &:hover .img_wrapper{
+                    flex: 0 0 100%;
+                }
+                
+                .image {
+                   flex: 0 0 100%; 
+                } 
+                
+                @media (min-width: $breakpoint-phone) {
+                    flex: 0 0 30%;
+              
+                }
+            
+                @media (min-width: $breakpoint-tablet) {
+                    flex: 0 0 12.0625%; /* 96,5/8 */
+                    margin-left: 0.5%;
+              
+                    
+                }
+                &:first-child {
+                    margin-left: 0; /* Först filmen i varje slider har margin left 0 */
+                }
+
+                .movie_info_wrapper {
+                    flex: 0 0 100%;
+                    display: none;
+                    background-image: url(./images/pepparmint/convert.jpg); /* Bakgrundsbild i headern för små skärmar */
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    justify-content: flex-end;
+
+                    .movie {
+                         
+                        h3 { 
+                    
+                        }
+                        .info {
+                            display: flex;
+                        }
+                    }
+                    
+                }
+        
+            }
+        }
+    }
+}
