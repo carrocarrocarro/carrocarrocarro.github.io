@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+        <title>JavaScript Ex1</title>
+        <link rel="stylesheet" href="src/style/reset.css">
+        <link rel="stylesheet" href="src/style/valuta.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+    </head>
+    <body>
+        <header>
+            <h1>Currency calculator</h1>
+        </header>
+        <nav>
+            <button onclick="showCalc();" class="btnToggle active-btn" id="calc-btn">Currency calc</button>
+            <button onclick="showCurrency();" class="btnToggle" id="currency-btn">Currency</button>
+        </nav>
+        <main>
+        
+            
+            
+            <div id="rate-counter">
+                    <div id="counter">
+                        <p>Swedish Currency Converter</p>
+                        <p>Value (SEK):</p>
+                        <input type="text" id="number" name="number">
+                        <p>To: </p>
+                        <select id="toCurrency">
+                            <option value="none">-- Choose currency --</option>
+                            <option value="sek">SEK</option>
+                            <option value="nok">NOK</option>
+                            <option value="ddk">DDK</option>
+                            <option value="isk">ISK</option>
+                            <option value="eur">EUR</option>
+                        </select>
+                        <button onclick="calc();">Count</button>
+                    </div>
+                    <div id="result-wrapper">
+                        <div class="flex center stretch" id="result-container">
+                            <div id="result"></div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div id="table-page">
+                <div id="country-list"></div>
+            </div>
+
+        
+        </main>
+        <footer>
+            <p>Currency calculator by Caroline</p>
+        </footer>
+        <script src="src/js/helper.js"></script>
+        <script src="src/js/valuta.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                loadCountries();
+            });
+        </script>
+    </body>
+</html>

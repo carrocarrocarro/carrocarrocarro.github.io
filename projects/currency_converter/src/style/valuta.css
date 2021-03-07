@@ -1,0 +1,128 @@
+:root {
+    --green-color: #2a2b2a;
+    --eggplant-color: #5e4955;
+    --antique-fuchsia-color: #996888;
+    --tuscany-color: #c99da3;
+    --blue-color: #c6ddf0;
+    --shade-color: #e0c3c7;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    grid-template-columns: auto;
+    width: 100vw;
+    font-size: 100%;
+}
+
+
+#my-table {
+    width: 400px;
+    background-color: blanchedalmond;
+}
+
+header{
+    border-bottom: var(--eggplant-color) solid 2px;
+    background-color: var(--antique-fuchsia-color);
+}
+
+header h1, footer p { 
+    text-align: center;
+}
+main {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 30px;
+    margin: 50px 0;
+}
+
+nav {
+    
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: var(--eggplant-color);
+}
+
+footer p {
+    padding: 50px 30px;
+}
+
+#table-page {
+    display: none;
+}
+
+#rate-counter {
+    display: flex;
+    width: 100%;
+    background-color: #e0c3c7;
+    border-radius: 10px;
+    padding: 15px;
+    
+}
+
+#result-wrapper {
+   
+    flex: 1;
+}
+
+#counter {
+    
+    flex: 1;
+
+}
+#result-container {
+    height: 100%;
+}
+.flex {
+    display: flex;
+}
+.center {
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.stretch {
+    align-content: stretch;
+}
+.btnToggle {
+    border: none;
+    background-color: var(--tuscany-color);
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin: 15px 15px;
+    border: 2px solid var(--eggplant-color);
+    
+}
+
+.btnToggle:hover{  
+    background-color: var(--tuscany-color);
+    cursor: pointer;
+    color:#fff;
+
+}
+
+.active-btn {
+    background-color: var(--shade-color);
+    color:#fff;
+
+}
+
+#currency-table {
+    background-color: #e0c3c7;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#currency-table th {
+    padding: 5px;
+    text-align: left;
+}
