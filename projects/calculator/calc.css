@@ -1,0 +1,82 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hotpink;
+    
+}
+
+.calc {
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 15em;
+    font-size: 1.2rem;
+    min-width: 10em;
+}
+
+.calc-display {
+    background-color: #222222;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 0.5em 0.75em;
+    text-align: right;
+  }
+
+
+.calc-keys {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1px;
+    background-color: #999;
+}
+
+/* Väljer alla element med .calc-keys som parent */
+.calc-keys > * {
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+  }
+  
+
+.clear {
+    grid-column: 1 /span 4;
+    background-color: #eee;
+    
+}
+
+.equal {
+    background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+}
+
+.key-operator {
+    background-color: #eee;
+  }
+
+  .calc-keys > *:hover {
+    cursor: pointer;
+  }
+  .calc-keys > *:active::before,
+.calc-keys > .is-depressed::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
