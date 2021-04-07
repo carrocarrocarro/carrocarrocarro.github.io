@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa Mars Rovers - Caroline Englund</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+</head>
+<body>
+    <div id="nav_btns">
+       <span class="nav_btn"></span>
+       <span class="nav_btn"></span>
+       <span class="nav_btn"></span>
+       
+    </div>
+   
+    <span class="material-icons" id="scroll_top">
+        <a href="#header">
+            arrow_circle_up
+        </a> 
+    </span>
+    
+    <div class="main_wrapper">
+        <nav>
+            <div id="logo">
+                NASA MARS ROVERS
+            </div>
+             <div id="nav_toggle">
+                 <label class="switchBtn">
+                    <input type="checkbox" id="switchBtn">
+                    <span class="slider round"></span>
+                </label>
+             </div>
+        </nav>
+        <main>
+            <section class="page" id="header">
+                <div id="header_inner">
+                    <form id="alias_form">
+                        <label for="alias">Space Name (must be 3 characters)</label><!-- Name from form vill be printed here-->
+                        <input type="text" id="alias" name="alias" placeholder="Pick your space name">
+                        <button id="show_alias" disabled>Show my name</button>
+                    </form>
+                </div>
+            </section>
+            <section class="page space" id="space_alias">
+                <h1><span id="new_alias"></span></h1>
+                <div id="mars"></div>
+            </section>
+            <section class="page" id="img_wrapper">
+                <div id="select_wrapper">
+                    <h3>Choose Rover to see images from Mars!</h3>
+                    <select id="rover_select">
+                        <option value="0">Curiosity</option>
+                        <option value="1">Opportunity</option>
+                        <option value="2">Spirit</option> 
+                    </select>
+                    <!-- <input type="text" id="sol_select" placeholder="Any number between 1-3000"> -->
+                    <span id="error_message">Sorry, there are no photos at this time.</span>
+                </div>
+                <div class="img_grid"><!--The data and images from the rovers will be printed here-->
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>Made by Caroline Englund using Mars Rover Photos API generating images shoot by NASA's NASA's Curiosity, Opportunity, and Spirit rovers on Mars</p>
+    </footer>
+    <script src="src/script/script.js"></script>
+</body>
+</html>
