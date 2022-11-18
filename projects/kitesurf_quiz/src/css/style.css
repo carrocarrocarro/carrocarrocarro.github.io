@@ -20,6 +20,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+*, html, body {
+    box-sizing: border-box;
+}
+
 /* Styling html */
 html {
     min-height: 100vh;
@@ -48,12 +52,12 @@ body {
 button {
     padding: 10px;
     margin: 10px;
-    font-size: 1.rem;
+    font-size: 1.0rem;
     font-weight: 300;
     color: #fff;
     background-color: #7D84B2;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     /*box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];*/
     box-shadow: 
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -62,7 +66,7 @@ button {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-    border-radius: 5px;
+    border-radius: 10px;
     border:none;
   
 }
@@ -105,6 +109,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:1em;
 }
 
 /* Styling för huvud menyn */
@@ -226,8 +231,8 @@ button:hover {
     0 100px 80px rgba(0, 0, 0, 0.12);
     border-radius: 5px;
     padding: 20px;
-    max-width: 50vw;
-
+    width: 100%;
+    
 }
 
 /* Konatiner för frågor */
@@ -280,8 +285,8 @@ button:hover {
     align-self: center;
     background-color: #8E9DCC;
     color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     text-align: center;
     line-height: 2;
@@ -295,6 +300,9 @@ button:hover {
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -332,10 +340,9 @@ button:hover {
     display: none;
 }*/
 
-
-
-@media only screen and (max-width: 1200px) {
-    #quiz-wrapper, #quiz-wrapper-vdws {
-        max-width: 50vw;
+@media (min-width:600px) {
+    #quiz-wrapper, #quiz-wrapper-vdws{
+        max-width: 700px;
     }
 }
+
